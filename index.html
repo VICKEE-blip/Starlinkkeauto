@@ -157,13 +157,77 @@
       text-decoration: underline;
       font-weight: bold;
 }
+
+    .contact {
+  background: #e2e8f0;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+.contact h3 {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.support-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* WhatsApp Glowing Button */
+.btn-glow {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #25d366;
+  color: #25d366;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+}
+
+.btn-glow:hover {
+  background-color: #25d366;
+  color: white;
+  box-shadow: 0 0 18px #25d366, 0 0 28px #25d366;
+}
+
+/* Email Glowing Button */
+.btn-glow-email {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #1e3a8a;
+  color: #1e3a8a;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(30, 58, 138, 0.4);
+}
+
+.btn-glow-email:hover {
+  background-color: #1e3a8a;
+  color: white;
+  box-shadow: 0 0 18px #1e3a8a, 0 0 28px #314da1;
+  }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Starlink Bundles</h1>
-    <p>Affordable Data with WhatsApp Support</p>
+    <h1>Starlink Kenya data Bundles offers</h1>
+    <p>Affordable Data with automated subscription</p>
   </header>
 
   <section class="cover-area">
@@ -199,13 +263,15 @@
 </main>
 
   <section class="contact">
-    <h3>Need Help?</h3>
-    <a class="btn" href="https://wa.me/254705691318?text=Hello!+I+need+help+in+purchasing+a+data+bundle" target="_blank">
+  <h3>Need Help?</h3>
+  <div class="support-buttons">
+    <a class="btn-glow" href="https://wa.me/254705691318?text=Hello!+I+need+help+in+purchasing+a+data+bundle" target="_blank">
       💬 WhatsApp Support
     </a>
-    <a class="email-link" href="mailto:support@vblib.tech?subject=Bundle Help&body=Hello%2C%20need%20help%20in%20purchasing%20an%20offer." target="_blank">
+    <a class="btn-glow-email" href="mailto:support@vblib.tech?subject=Bundle Help&body=Hello%2C%20need%20help%20in%20purchasing%20an%20offer." target="_blank">
       ✉️ Email Support
     </a>
+  </div>
   </section>
 
   <footer class="footer">

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starlink Bundles - V-BLIB TECH</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      text-align: center;
+}
+
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 2rem 1rem;
+}
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+}
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+}
+
+.cover-area {
+      width: 100%;
+      overflow: hidden;
+}
+
+.cover-area img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-bottom: 3px solid #1e3a8a;
+}
+
+.bundles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+}
+
+.bundle-card {
+      background: white;
+      border: 2px solid #1e3a8a;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 90%;
+      max-width: 400px;
+      text-decoration: none;
+      color: #1e3a8a;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.bundle-card:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-3px);
+}
+
+.bundle-card h2 {
+      margin: 0;
+      font-size: 1.4rem;
+}
+
+.bundle-card p {
+      margin: 0.5rem 0;
+}
+
+.bundle-card span {
+      font-weight: bold;
+}
+
+.contact {
+      background: #e2e8f0;
+      padding: 2rem 1rem;
+}
+
+.contact h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+}
+
+.contact.btn,
+.contact.email-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 0.95rem;
+}
+
+.contact.btn {
+      background-color: #25d366;
+      color: white;
+}
+
+.contact.btn:hover {
+      background-color: #1ebe5d;
+}
+
+.contact.email-link {
+      background-color: #1e3a8a;
+      color: white;
+}
+
+.contact.email-link:hover {
+      background-color: #314da1;
+}
+
+    footer {
+      background: #1e3a8a;
+      color: white;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+}
+
+    footer p {
+      margin: 0.3rem 0;
+}
+
+.footer.social {
+      margin: 0.5rem 0;
+}
+
+.footer.social a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: underline;
+      font-weight: bold;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Starlink Bundles</h1>
+    <p>Affordable Data with WhatsApp Support</p>
+  </header>
+
+  <section class="cover-area">
+    <img src="https://files.catbox.moe/34hvgv.jpeg" alt="Starlink Bundles Cover" />
+  </section>
+
+  <main class="bundles">
+  <a href="instructions.html?bundle=1day" class="bundle-card">
+    <h2>1 Day</h2>
+    <p>1.5GB + WhatsApp</p>
+    <span>Ksh 30</span>
+  </a>
+  <a href="instructions.html?bundle=3days" class="bundle-card">
+    <h2>3 Days</h2>
+    <p>5GB + WhatsApp</p>
+    <span>Ksh 100</span>
+  </a>
+  <a href="instructions.html?bundle=7days" class="bundle-card">
+    <h2>7 Days</h2>
+    <p>10GB + WhatsApp</p>
+    <span>Ksh 150</span>
+  </a>
+  <a href="instructions.html?bundle=14days" class="bundle-card">
+    <h2>14 Days</h2>
+    <p>25GB + WhatsApp</p>
+    <span>Ksh 250</span>
+  </a>
+  <a href="instructions.html?bundle=30days" class="bundle-card">
+    <h2>30 Days</h2>
+    <p>30GB + WhatsApp</p>
+    <span>Ksh 500</span>
+  </a>
+</main>
+
+  <section class="contact">
+    <h3>Need Help?</h3>
+    <a class="btn" href="https://wa.me/254705691318?text=Hello!+I+need+help+in+purchasing+a+data+bundle" target="_blank">
+      💬 WhatsApp Support
+    </a>
+    <a class="email-link" href="mailto:support@vblib.tech?subject=Bundle Help&body=Hello%2C%20need%20help%20in%20purchasing%20an%20offer." target="_blank">
+      ✉️ Email Support
+    </a>
+  </section>
+
+  <footer class="footer">
+    <p>Powered by Safaricom M-PESA</p>
+    <p>Fast Access — Secure Payments — Reliable Connection</p>
+    <div class="social">
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Facebook</a>
+    </div>
+    <p>&copy; 2025 Starlink Kenya. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bundle Instructions - V-BLIB TECH</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+}
+
+.overlay {
+      background: white;
+      padding: 2rem;
+      width: 80%;
+      max-width: 900px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #25d366;
+      border: 4px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      animation: glow 2s infinite ease-in-out;
+}
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #25d366;}
+      50% { box-shadow: 0 0 20px #1e3a8a;}
+      100% { box-shadow: 0 0 10px #25d366;}
+}
+
+.close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.3rem;
+      color: #999;
+      cursor: pointer;
+}
+
+    h2 {
+      margin-top: 0;
+      color: #1e3a8a;
+      font-size: 1.6rem;
+}
+
+    ol {
+      padding-left: 1.2rem;
+      text-align: left;
+}
+
+    li {
+      margin-bottom: 0.6rem;
+}
+
+.till-section {
+      margin: 1rem 0;
+      font-weight: bold;
+}
+
+.copy-btn {
+      margin-left: 10px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+      background-color: #25d366;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+}
+
+.copy-btn:hover {
+      background-color: #1ebe5d;
+}
+
+.button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+}
+
+.button:hover {
+      background-color: #314da1;
+}
+
+.support {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      text-align: left;
+}
+
+.support a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: white;
+      background-color: #25d366;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+}
+
+.support a:hover {
+      background-color: #1ebe5d;
+}
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+    <div class="close" onclick="goHome()">❌</div>
+
+    <h2 id="bundleTitle">Loading bundle...</h2>
+    <p><strong>How to Buy via M-PESA:</strong></p>
+    <ol>
+      <li>Go to M-PESA</li>
+      <li>Select Lipa na M-PESA</li>
+      <li>Choose Buy Goods and Services</li>
+    </ol>
+
+    <div class="till-section">
+      Till Number: <span id="tillNumber">3599278</span>
+      <button onclick="copyTill()" class="copy-btn">Copy</button>
+    </div>
+
+    <ol start="4">
+      <li id="bundleAmount">Amount: Ksh...</li>
+      <li>Click Pay and wait for confirmation</li>
+    </ol>
+
+    <div class="support">
+      <p>If you need help:</p>
+      <a href="https://wa.me/254705691318?text=Hello!+I+need+help+in+purchasing+a+data+bundle" target="_blank">
+        💬 Contact via WhatsApp
+      </a>
+    </div>
+
+    <button class="button" onclick="goHome()">Understood</button>
+  </div>
+
+  <script>
+    function goHome() {
+      window.location.href = "index.html";
+}
+
+    function copyTill() {
+      const till = document.getElementById("tillNumber").innerText;
+      navigator.clipboard.writeText(till).then(() => {
+        alert("✅ Till Number copied: " + till);
+        });
+}
+
+    // Dynamic bundle info
+    const params = new URLSearchParams(window.location.search);
+    const bundleKey = params.get("bundle");
+
+    const bundles = {
+      "1day": { title: "1 Day – 1.5GB + WhatsApp", amount: "Ksh 30"},
+      "3days": { title: "3 Days – 5GB + WhatsApp", amount: "Ksh 100"},
+      "7days": { title: "7 Days – 10GB + WhatsApp", amount: "Ksh 150"},
+      "14days": { title: "14 Days – 25GB + WhatsApp", amount: "Ksh 250"},
+      "30days": { title: "30 Days – 30GB + WhatsApp", amount: "Ksh 500"},
+};
+
+    const bundle = bundles[bundleKey] || { title: "Unknown Bundle", amount: "Ksh???"};
+    document.getElementById("bundleTitle").textContent = bundle.title;
+    document.getElementById("bundleAmount").textContent = "Amount: " + bundle.amount;
+  </script>
+
+</body>
+</html>
